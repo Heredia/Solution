@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F207FEF9-8E89-4C17-B054-BBE6BDE77FEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Domain.Domains</RootNamespace>
+    <AssemblyName>Domain.Domains</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Implementations\BaseDomain.cs" />
+    <Compile Include="Implementations\UserDomain.cs" />
+    <Compile Include="Interfaces\IBaseDomain.cs" />
+    <Compile Include="Interfaces\IUserDomain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\DomainUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IDomainUnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Helper\Collections\Helper.Collections.csproj">
+      <Project>{A5B67AC2-4392-43B1-B98D-859EAA83945B}</Project>
+      <Name>Helper.Collections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\Databases\Infrastructure.Databases.csproj">
+      <Project>{80338bcc-320e-4060-8c45-be41b55cb78e}</Project>
+      <Name>Infrastructure.Databases</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Constants\Model.Constants.csproj">
+      <Project>{6d176550-8b89-4c7c-a595-47a20c34b22e}</Project>
+      <Name>Model.Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Enums\Model.Enums.csproj">
+      <Project>{1d6c22d5-319b-46de-9fb9-79ce5d4b7ade}</Project>
+      <Name>Model.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Exceptions\Model.Exceptions.csproj">
+      <Project>{46ff2fb4-272e-45e4-91b7-065fc6260537}</Project>
+      <Name>Model.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Models\Model.Models.csproj">
+      <Project>{61666c74-2043-463f-b1aa-71232c9a27ee}</Project>
+      <Name>Model.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

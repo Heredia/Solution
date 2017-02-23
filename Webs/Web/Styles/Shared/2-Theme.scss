@@ -1,0 +1,238 @@
+﻿@import "0-Variables.scss";
+
+* {
+    font-family: $font-family;
+    font-size: $font-size;
+}
+
+/* INPUT */
+input, select, textarea, button, .button,
+[type="checkbox"] + label:before,
+[type="radio"] + label:before,
+[type="file"] + label {
+    border: $border-size solid $color-primary;
+    margin: 0.2rem;
+    padding: $element-padding;
+    text-align: left !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #FFF9C4;
+}
+
+button, .button,
+[type="submit"],
+[type="reset"],
+[type="file"] + label {
+    @extend .text-selection-blocked;
+    background-color: $color-primary;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 10rem;
+    padding: $element-padding;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    text-align: center !important;
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus,
+[type="submit"]:hover, [type="submit"]:focus,
+[type="reset"]:hover, [type="reset"]:focus,
+[type="file"] + label:hover, [type="file"] + label:focus {
+    background-color: $color-primary-hover-focus;
+}
+
+[type="checkbox"], [type="radio"], [type="file"] {
+    border: none;
+    height: 0 !important;
+    margin: 0 !important;
+    opacity: 0;
+    padding: 0 !important;
+    position: absolute;
+    width: 0 !important;
+    z-index: -100;
+}
+
+[type="checkbox"] + label, [type="radio"] + label {
+    @extend .text-selection-blocked;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+}
+
+[type="checkbox"] + label:before, [type="radio"] + label:before {
+    background: #FFF;
+    border: $border-size solid $color-primary;
+    content: "";
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+[type="checkbox"]:checked + label:before, [type="radio"]:checked + label:before {
+    background-color: $color-primary;
+}
+
+[type="radio"] + label:before {
+    border-radius: 50%;
+}
+
+[type="checkbox"]:focus + label, [type="radio"]:focus + label {
+    outline: $border-size solid #DDD;
+}
+
+:disabled, :disabled:hover, :disabled:focus,
+.disabled, .disabled:hover, .disabled:focus,
+[type="checkbox"]:disabled + label:before,
+[type="radio"]:disabled + label:before,
+[type="file"]:disabled + label {
+    background-color: #DDD;
+    color: #222;
+    opacity: 0.6;
+}
+
+[type="checkbox"]:checked:disabled + label:before,
+[type="radio"]:checked:disabled + label:before {
+    background-color: $color-primary;
+    opacity: 0.6;
+}
+
+:disabled, :disabled:hover, :disabled:focus,
+.disabled, .disabled:hover, .disabled:focus,
+[type="checkbox"]:disabled + label, [type="checkbox"]:disabled + label:before,
+[type="radio"]:disabled + label, [type="radio"]:disabled + label:before,
+[type="file"]:disabled, [type="file"]:disabled + label {
+    @extend .text-selection-blocked;
+    pointer-events: none;
+}
+/* END INPUT */
+
+/* TABLE */
+table {
+    border: $border-size solid $color-secondary;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1rem 0;
+    width: 100%;
+
+    th, tfoot td {
+        background-color: $color-secondary;
+        color: #FFF;
+    }
+
+    th, tbody td {
+        padding: $element-padding;
+    }
+
+    th a {
+        @extend .text-selection-blocked;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    th:not(:first-child) {
+        border-left: $border-size solid #FFF;
+    }
+
+    td {
+        border: $border-size solid $color-secondary;
+    }
+
+    tbody a {
+        color: #000;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: $color-secondary-hover-focus;
+    }
+
+    tfoot ul {
+        display: inline-block;
+        user-select: none;
+    }
+
+    tfoot ul li {
+        display: inline;
+
+        a, span {
+            color: #FFF;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: bold;
+            padding: $element-padding;
+            text-decoration: none;
+        }
+
+        .currentPage, a:hover, i:hover, span:hover {
+            background-color: #FFF !important;
+            color: $color-secondary !important;
+        }
+    }
+}
+/* END TABLE */
+
+/* CARD */
+.card {
+    border: $border-size solid $color-secondary;
+}
+
+.card-title {
+    background-color: $color-secondary;
+    color: #FFF;
+}
+
+.card-content {
+    text-align: justify;
+}
+
+.card-title, .card-content {
+    padding: $element-padding;
+}
+/* END CARD */
+
+/* SPINNER */
+.spinner {
+    animation: spin 1s infinite linear;
+    border: 0.3rem solid $color-secondary;
+    border-top-color: #DDD;
+    border-radius: 50%;
+    height: 3rem;
+    margin: 0.3rem auto;
+    width: 3rem;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* END SPINNER */
+
+/* CLASSES */
+.text-selection-blocked {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.title {
+    background-color: $color-primary-hover-focus;
+    color: #FFF;
+    font-weight: bold;
+    padding: $element-padding;
+    text-transform: uppercase;
+}
+
+.validation-invalid {
+    background-color: #F5A9A9 !important;
+    border-color: #900C3F;
+}
+/* END CLASSES */

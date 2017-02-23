@@ -1,0 +1,31 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+<html lang="@Thread.CurrentThread.CurrentCulture.Name.ToLowerInvariant()">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, width = device-width" />
+    <base href="@Url.Action(string.Empty, string.Empty, null, Request.Url?.Scheme)">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Bundles/Styles")
+</head>
+<body ng-app="Application">
+    <div id="wrp-container" class="container">
+
+        @Html.Partial("Header")
+
+        @Html.Partial("Menu")
+
+        <div id="wrp-main" class="row">
+            <div class="col-xs-12">
+                <main>
+                    <div ng-view></div>
+                </main>
+            </div>
+        </div>
+
+        @Html.Partial("Footer")
+    </div>
+    @Scripts.Render("~/Bundles/Scripts")
+</body>
+</html>

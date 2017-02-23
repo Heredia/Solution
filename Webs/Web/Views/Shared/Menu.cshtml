@@ -1,0 +1,31 @@
+﻿<div id="wrp-menu" class="row" ng-controller="MenuController">
+    <div class="col-xs-12" ng-if="IsMenuVisible">
+        <nav>
+            <ul>
+                <li ng-class="{ active: IsMenuItemActive('/$/Home') }">
+                    <a ng-href="~/$/Home">Home</a>
+                </li>
+
+                <li ng-class="{ active: IsMenuItemActive('/$/Validation') }">
+                    <a ng-href="~/$/Validation">Validation</a>
+                </li>
+
+                <li ng-class="{ active: IsMenuItemActive('/$/Template') }">
+                    <a ng-href="~/$/Template">Template</a>
+                </li>
+
+                <li ng-class="{ active: IsMenuItemActive('/$/Upload') }">
+                    <a ng-href="~/$/Upload">Upload</a>
+                </li>
+
+                <li ng-class="{ active: IsMenuItemActive('/$/UserList') }">
+                    <a ng-href="~/$/UserList">User List</a>
+                </li>
+
+                <li>
+                    <a ng-click="Logout()">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

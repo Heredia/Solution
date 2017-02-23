@@ -1,0 +1,1 @@
+﻿nav{background-color:#00796b;}nav ul{display:table;margin:0 auto;}nav ul li{float:left;margin:.5rem;padding:.5rem 2rem;}nav ul li a{color:#ddebe9;font-weight:bold;text-transform:uppercase;text-decoration:none;vertical-align:baseline;}nav ul li.active,nav ul li.active>a,nav ul li:hover,nav ul li:hover>a{background-color:#ddebe9;color:#00796b;}

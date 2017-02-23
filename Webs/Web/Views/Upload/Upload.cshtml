@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">Upload</h2>
+    </div>
+</div>
+
+<div class="row" ng-repeat="upload in Uploads">
+    <div class="col-xs-5"></div>
+    <div class="col-xs-1">
+        <div>
+            <upload name="upload-{{$index}}"
+                    text="Attach"
+                    extensions="txt|pdf"
+                    size="10"
+                    file="upload.File">
+            </upload>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <span ng-bind="upload.File.name || 'Choose a file.'"></span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-5"></div>
+    <div class="col-xs-1">
+        <div>
+            <button ng-click="Upload()">Upload</button>
+        </div>
+    </div>
+    <div class="col-xs-6"></div>
+</div>

@@ -1,0 +1,6 @@
+﻿Extensions:
+	WebCompiler
+
+Package Manager Console:
+	Update-Package Microsoft.AspNet.WebApi -reinstall
+	Update-Package Microsoft.AspNet.Mvc -reinstall

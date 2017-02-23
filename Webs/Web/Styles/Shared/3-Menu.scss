@@ -1,0 +1,29 @@
+﻿@import "0-Variables.scss";
+
+nav {
+    background-color: $color-secondary;
+
+    ul {
+        display: table;
+        margin: 0 auto;
+
+        li {
+            float: left;
+            margin: 0.5rem;
+            padding: 0.5rem 2rem;
+
+            a {
+                color: $color-secondary-hover-focus;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                vertical-align: baseline;
+            }
+        }
+
+        li.active, li.active > a, li:hover, li:hover > a {
+            background-color: $color-secondary-hover-focus;
+            color: $color-secondary;
+        }
+    }
+}

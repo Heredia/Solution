@@ -1,0 +1,32 @@
+﻿@import "0-Variables.scss";
+
+#wrp-container {
+    min-height: 100%;
+    position: relative;
+
+    #wrp-header, #wrp-main, #wrp-footer {
+        width: 100%;
+    }
+
+    #wrp-header {
+        background-color: #444;
+        height: 10rem;
+    }
+
+    #wrp-main {
+        height: 100%;
+        min-height: 100%;
+        padding-bottom: 5rem;
+    }
+
+    #wrp-footer {
+        background-color: #444;
+        bottom: 0;
+        height: 3rem;
+        position: absolute;
+    }
+
+    #wrp-header *, #wrp-footer * {
+        color: #FFF;
+    }
+}

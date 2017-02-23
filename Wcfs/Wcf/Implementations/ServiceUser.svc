@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Wcfs.Wcf.Implementations.ServiceUser" Factory="WCF.Factories.WcfServiceFactory" %>

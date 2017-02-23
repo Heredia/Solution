@@ -1,0 +1,145 @@
+﻿<div class="row">
+    <div class="col-xs-12">
+        <h2 class="title">Validation</h2>
+    </div>
+</div>
+
+<br /><br />
+
+<div class="row">
+    <div class="col-xs-4">
+        <h2 class="title">Integer</h2>
+        <br />
+
+        <label>Integer [Required]:</label>
+        <input type="text" val-required val-integer ng-model="IntegerRequired" />
+        <label ng-bind="IntegerRequired"></label>
+        <br />
+
+        <label>Integer [Positive and Negative]:</label>
+        <input type="text" val-integer ng-model="IntegerPositiveNegative" />
+        <label ng-bind="IntegerPositiveNegative"></label>
+        <br />
+
+        <label>Integer [Positive]:</label>
+        <input type="text" val-integer val-signal="+" ng-model="IntegerPositive" />
+        <label ng-bind="IntegerPositive"></label>
+        <br />
+
+        <label>Integer [Negative]:</label>
+        <input type="text" val-integer val-signal="-" ng-model="IntegerNegative" />
+        <label ng-bind="IntegerNegative"></label>
+        <br />
+
+        <label>Integer [Min: -10, Max: 20]:</label>
+        <input type="text" val-integer val-min="-10" val-max="20" ng-model="IntegerMinMax" />
+        <label ng-bind="IntegerMinMax"></label>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h2 class="title">Decimal</h2>
+        <br />
+
+        <label>Decimal [Required]:</label>
+        <input type="text" val-required val-decimal ng-model="DecimalRequired" />
+        <label ng-bind="DecimalRequired"></label>
+        <br />
+
+        <label>Decimal [Positive and Negative]:</label>
+        <input type="text" val-decimal ng-model="DecimalPositiveNegative" />
+        <label ng-bind="DecimalPositiveNegative"></label>
+        <br />
+
+        <label>Decimal [Positive]:</label>
+        <input type="text" val-decimal val-signal="+" ng-model="DecimalPositive" />
+        <label ng-bind="DecimalPositive"></label>
+        <br />
+
+        <label>Decimal [Negative]:</label>
+        <input type="text" val-decimal val-signal="-" ng-model="DecimalNegative" />
+        <label ng-bind="DecimalNegative"></label>
+        <br />
+
+        <label>Decimal [Min: -5.25, Max: 10.25]:</label>
+        <input type="text" val-decimal val-min="-5.25" val-max="10.25" ng-model="DecimalMinMax" />
+        <label ng-bind="DecimalMinMax"></label>
+        <br />
+
+        <label>Decimal [Places: 5]:</label>
+        <input type="text" val-decimal val-places="5" ng-model="DecimalPlaces" />
+        <label ng-bind="DecimalPlaces"></label>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h2 class="title">Currency</h2>
+        <br />
+
+        <label>Currency [Required]:</label>
+        <input type="text" val-required val-currency ng-model="CurrencyRequired" />
+        <label ng-bind="CurrencyRequired"></label>
+        <br />
+
+        <label>Currency [Positive and Negative]:</label>
+        <input type="text" val-currency ng-model="CurrencyPositiveNegative" />
+        <label ng-bind="CurrencyPositiveNegative"></label>
+        <br />
+
+        <label>Currency [Positive]:</label>
+        <input type="text" val-currency val-signal="+" ng-model="CurrencyPositive" />
+        <label ng-bind="CurrencyPositive"></label>
+        <br />
+
+        <label>Currency [Negative]:</label>
+        <input type="text" val-currency val-signal="-" ng-model="CurrencyNegative" />
+        <label ng-bind="CurrencyNegative"></label>
+        <br />
+
+        <label>Currency [Min: 100.00, Max: 1,425.50]:</label>
+        <input type="text" val-currency val-min="100.00" val-max="1425.50" ng-model="CurrencyMinMax" />
+        <label ng-bind="CurrencyMinMax"></label>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h2 class="title">Time</h2>
+        <br />
+
+        <label>Time [Required]:</label>
+        <input type="text" val-required val-time ng-model="TimeRequired" />
+        <label ng-bind="TimeRequired"></label>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h2 class="title">Date</h2>
+        <br />
+
+        <label>Date [Required]:</label>
+        <input type="text" val-required val-date ng-model="DateRequired" />
+        <label ng-bind="DateRequired"></label>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-4">
+        <h2 class="title">Validation</h2>
+        <br />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-1">
+        <button onclick="ValidationHelper.IsValid()">Validate</button>
+    </div>
+</div>

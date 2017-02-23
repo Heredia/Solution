@@ -1,0 +1,22 @@
+﻿[
+  {
+    "outputFile": "Styles/Libraries/1-Layout.css",
+    "inputFile": "Styles/Libraries/1-Layout.scss"
+  },
+  {
+    "outputFile": "Styles/Shared/0-Variables.css",
+    "inputFile": "Styles/Shared/0-Variables.scss"
+  },
+  {
+    "outputFile": "Styles/Shared/1-MasterPage.css",
+    "inputFile": "Styles/Shared/1-MasterPage.scss"
+  },
+  {
+    "outputFile": "Styles/Shared/2-Theme.css",
+    "inputFile": "Styles/Shared/2-Theme.scss"
+  },
+  {
+    "outputFile": "Styles/Shared/3-Menu.css",
+    "inputFile": "Styles/Shared/3-Menu.scss"
+  }
+]

@@ -1,0 +1,28 @@
+﻿<div>
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="title">User List</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <grid>
+                <configuration url="UserService/PagedListUsers"></configuration>
+
+                <filter property="UserId" label="Id" type="integer" maxlength="5"></filter>
+                <filter property="Name" label="Name" maxlength="50"></filter>
+
+                <column property="UserId" orderable="true" label="Id" class="center" width="20%">
+                    <a ng-click="SelectUser(item['UserId'])">{{item['UserId']}}</a>
+                </column>
+                <column property="Name" orderable="true" label="Name" class="left" width="30%"></column>
+                <column property="Surname" orderable="true" label="Surname" class="left" width="30%"></column>
+                <column label="Actions" class="center" width="20%">
+                    <button ng-click="EditUser(item['UserId'])">Edit</button>
+                    <button ng-click="DeleteUser(item['UserId'])">Delete</button>
+                </column>
+            </grid>
+        </div>
+    </div>
+</div>
